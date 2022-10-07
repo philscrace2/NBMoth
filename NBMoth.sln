@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.App", "NBMoth.App\NBMoth.App.csproj", "{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Backend", "NBMoth.Backend\NBMoth.Backend.csproj", "{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Checkers", "NBMoth.Checkers\NBMoth.Checkers.csproj", "{723EBD2E-512E-4E97-9DC2-1F69E25F004E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Cli", "NBMoth.Cli\NBMoth.Cli.csproj", "{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.EventBus", "NBMoth.EventBus\NBMoth.EventBus.csproj", "{D5004271-0D9C-4066-AB0D-DE84A59483C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.ModelChecker", "NBMoth.ModelChecker\NBMoth.ModelChecker.csproj", "{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Parser", "NBMoth.Parser\NBMoth.Parser.csproj", "{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723EBD2E-512E-4E97-9DC2-1F69E25F004E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723EBD2E-512E-4E97-9DC2-1F69E25F004E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723EBD2E-512E-4E97-9DC2-1F69E25F004E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723EBD2E-512E-4E97-9DC2-1F69E25F004E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5004271-0D9C-4066-AB0D-DE84A59483C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5004271-0D9C-4066-AB0D-DE84A59483C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5004271-0D9C-4066-AB0D-DE84A59483C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5004271-0D9C-4066-AB0D-DE84A59483C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A5BEEC2-CE67-435B-B501-63F176CB5BFC}
+	EndGlobalSection
+EndGlobal
