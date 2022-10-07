@@ -5,4 +5,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="initialstateexists\InitialStateExistsChecker.cs" />
+    <Compile Remove="initialstateexists\InitialStateExistsCheckingResult.cs" />
+    <Compile Remove="invariantsatisfiability\InvariantSatisfiabilityChecker.cs" />
+    <Compile Remove="invariantsatisfiability\InvariantSatisfiabilityCheckingResult.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="initialstateexists\InitialStateExistsChecker.cs" />
+    <None Include="initialstateexists\InitialStateExistsCheckingResult.cs" />
+    <None Include="invariantsatisfiability\InvariantSatisfiabilityChecker.cs" />
+    <None Include="invariantsatisfiability\InvariantSatisfiabilityCheckingResult.cs" />
+  </ItemGroup>
+
 </Project>

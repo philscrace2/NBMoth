@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NBMoth.App
+namespace NBMoth.Tests
 {
     public class Class1
     {

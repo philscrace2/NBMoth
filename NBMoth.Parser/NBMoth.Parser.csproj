@@ -5,4 +5,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ast\types\BasicType.cs" />
+    <Compile Remove="ast\types\BoolType.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ast\types\BasicType.cs" />
+    <None Include="ast\types\BoolType.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+  </ItemGroup>
+
 </Project>

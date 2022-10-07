@@ -5,4 +5,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="CliApplication.cs" />
+    <Compile Remove="CliGetopt.cs" />
+    <Compile Remove="CliOption.cs" />
+    <Compile Remove="CliTask.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="CliApplication.cs" />
+    <None Include="CliGetopt.cs" />
+    <None Include="CliOption.cs" />
+    <None Include="CliTask.cs" />
+  </ItemGroup>
+
 </Project>

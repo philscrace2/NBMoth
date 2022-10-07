@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.App", "NBMoth.App\NBMoth.App.csproj", "{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.Backend", "NBMoth.Backend\NBMoth.Backend.csproj", "{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Backend", "NBMoth.Backend\NBMoth.Backend.csproj", "{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.Checkers", "NBMoth.Checkers\NBMoth.Checkers.csproj", "{723EBD2E-512E-4E97-9DC2-1F69E25F004E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Checkers", "NBMoth.Checkers\NBMoth.Checkers.csproj", "{723EBD2E-512E-4E97-9DC2-1F69E25F004E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.Cli", "NBMoth.Cli\NBMoth.Cli.csproj", "{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Cli", "NBMoth.Cli\NBMoth.Cli.csproj", "{92CEDC60-C444-40E0-9C77-3A4378C5DD2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.EventBus", "NBMoth.EventBus\NBMoth.EventBus.csproj", "{D5004271-0D9C-4066-AB0D-DE84A59483C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.EventBus", "NBMoth.EventBus\NBMoth.EventBus.csproj", "{D5004271-0D9C-4066-AB0D-DE84A59483C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.ModelChecker", "NBMoth.ModelChecker\NBMoth.ModelChecker.csproj", "{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.ModelChecker", "NBMoth.ModelChecker\NBMoth.ModelChecker.csproj", "{F4EE4565-E989-4C9B-B702-8D21DEB4CDC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.Parser", "NBMoth.Parser\NBMoth.Parser.csproj", "{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.Parser", "NBMoth.Parser\NBMoth.Parser.csproj", "{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBMoth.Tests", "NBMoth.Tests\NBMoth.Tests.csproj", "{4185C4DF-8AF6-400E-ADAE-EA10251146B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBMoth.App", "NBMoth.App\NBMoth.App.csproj", "{4C504587-03B4-4D1C-8CB4-CF91A1682230}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F799B0F6-AA59-4740-A9AA-B5A97AC148FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F6A3BFC-90FE-4E1E-9ED4-D8377786CF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +49,14 @@ Global
 		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4DA6346-57FF-4498-9B13-837EF0C8EF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4185C4DF-8AF6-400E-ADAE-EA10251146B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4185C4DF-8AF6-400E-ADAE-EA10251146B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4185C4DF-8AF6-400E-ADAE-EA10251146B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4185C4DF-8AF6-400E-ADAE-EA10251146B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C504587-03B4-4D1C-8CB4-CF91A1682230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C504587-03B4-4D1C-8CB4-CF91A1682230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C504587-03B4-4D1C-8CB4-CF91A1682230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C504587-03B4-4D1C-8CB4-CF91A1682230}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

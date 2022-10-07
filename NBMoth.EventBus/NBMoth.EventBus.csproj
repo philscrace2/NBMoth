@@ -5,4 +5,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ErrorEvent.cs" />
+    <Compile Remove="EventBusProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ErrorEvent.cs" />
+    <None Include="EventBusProvider.cs" />
+  </ItemGroup>
+
 </Project>

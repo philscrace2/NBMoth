@@ -10,4 +10,12 @@
     <Folder Include="z3\transformation\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Z3" Version="4.11.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NBMoth.Parser\NBMoth.Parser.csproj" />
+  </ItemGroup>
+
 </Project>
