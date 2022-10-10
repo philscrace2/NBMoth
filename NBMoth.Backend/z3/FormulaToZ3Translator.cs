@@ -2,6 +2,7 @@ using Microsoft.Z3;
 using System.Collections.Generic;
 using System.Collections;
 using NBMoth.Parser.ast.nodes;
+using NBMoth.Parser;
 
 
 //import com.microsoft.z3.*;
@@ -86,7 +87,7 @@ public class FormulaToZ3Translator{
             try
             {
                 this.z3Context = z3Context;
-                this.formulaNode = Parser.getFormulaAsSemanticAst(formula);
+                this.formulaNode = Parser.Parser.getFormulaAsSemanticAst(formula);
 
                 this.implicitDeclarations = formulaNode.getImplicitDeclarations();
                 z3TypeInference = new Z3TypeInference();
