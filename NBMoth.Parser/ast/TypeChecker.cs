@@ -1,7 +1,6 @@
-namespace NBMoth.Parser {
+using NBMoth.Parser.ast.nodes;
 
-
-
+namespace NBMoth.Parser.ast {
     public class TypeChecker : AbstractVisitor<BType, BType>
     {
 

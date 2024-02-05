@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NBMoth.Antlr\NBMoth.Antlr.csproj" />
     <ProjectReference Include="..\NBMoth.Backend\NBMoth.Backend.csproj" />
     <ProjectReference Include="..\NBMoth.Parser\NBMoth.Parser.csproj" />
   </ItemGroup>

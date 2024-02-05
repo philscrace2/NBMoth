@@ -1,6 +1,13 @@
 using NBMoth.Parser.ast;
+using NBMoth.Parser.ast.nodes.ltl;
+using NBMoth.Parser.ast.nodes;
+using NBMoth.Parser;
+using Parser = NBMoth.Parser.Parser;
+using System.Text;
+using System.Collections.Generic;
+using NUnit.Framework;
 
-namespace NBMoth.Tests{
+namespace NBMoth.Tests {
 
     //package de.bmoth;
 
@@ -15,7 +22,7 @@ namespace NBMoth.Tests{
 
     //import static org.junit.Assert.fail;
 
-public class TestParser
+    public class TestParser
     {
         protected TestParser()
         {
@@ -26,11 +33,11 @@ public class TestParser
         {
             try
             {
-                return Parser.getLTLFormulaAsSemanticAst(formula);
+                return Parser.Parser.getLTLFormulaAsSemanticAst(formula);
             }
             catch (ParserException e)
             {
-                fail(e.getMessage());
+                Assert.Fail(e.getMessage());
                 return null;
             }
         }
@@ -39,11 +46,11 @@ public class TestParser
         {
             try
             {
-                return Parser.getFormulaAsSemanticAst(formula);
+                return Parser.Parser.getFormulaAsSemanticAst(formula);
             }
             catch (ParserException e)
             {
-                fail(e.getMessage());
+                Assert.Fail(e.getMessage());
                 return null;
             }
         }
@@ -52,11 +59,11 @@ public class TestParser
         {
             try
             {
-                return Parser.getMachineAsSemanticAst(machine);
+                return Parser.Parser.getMachineAsSemanticAst(machine);
             }
             catch (ParserException e)
             {
-                fail(e.getMessage());
+                Assert.Fail(e.getMessage());
                 return null;
             }
         }
@@ -65,11 +72,11 @@ public class TestParser
         {
             try
             {
-                return Parser.getMachineFileAsSemanticAst(file);
+                return Parser.Parser.getMachineFileAsSemanticAst(file);
             }
             catch (ParserException e)
             {
-                fail(e.getMessage());
+                Assert.Fail(e.getMessage());
                 return null;
             }
         }
@@ -83,7 +90,7 @@ public class TestParser
             private string properties = "";
             private string invariant = "";
             private string initialization = "";
-            private List<string> operations = new ArrayList<>();
+            private List<string> operations = new List<string>();
 
             public MachineBuilder setName(string name)
             {
@@ -111,57 +118,57 @@ public class TestParser
 
             public MachineBuilder addOperation(string operation)
             {
-                this.operations.add(operation);
+                this.operations.Add(operation);
                 return this;
             }
 
 
             public MachineNode build()
             {
-                return parseMachine(this.tostring());
+                return parseMachine(this.Tostring());
             }
 
-            @Override
-            public string tostring()
+
+            public string Tostring()
             {
-                stringBuilder sb = new stringBuilder();
-                sb.append("MACHINE ").append(name).append("\n");
-                if (!definitions.isEmpty())
+                StringBuilder sb = new StringBuilder();
+                sb.Append("MACHINE ").Append(name).Append("\n");
+                if (definitions.Length > 0)
                 {
-                    sb.append("DEFINITIONS ").append(definitions).append("\n");
+                    sb.Append("DEFINITIONS ").Append(definitions).Append("\n");
                 }
-                if (!sets.isEmpty())
+                if (sets.Length > 0)
                 {
-                    sb.append("SETS ").append(sets).append("\n");
+                    sb.Append("SETS ").Append(sets).Append("\n");
                 }
-                if (!variables.isEmpty())
+                if (variables.Length > 0)
                 {
-                    sb.append("VARIABLES ").append(variables).append("\n");
+                    sb.Append("VARIABLES ").Append(variables).Append("\n");
                 }
-                if (!properties.isEmpty())
+                if (properties.Length > 0)
                 {
-                    sb.append("PROPERTIES ").append(properties).append("\n");
+                    sb.Append("PROPERTIES ").Append(properties).Append("\n");
                 }
-                if (!invariant.isEmpty())
+                if (invariant.Length > 0)
                 {
-                    sb.append("INVARIANT ").append(invariant).append("\n");
+                    sb.Append("INVARIANT ").Append(invariant).Append("\n");
                 }
-                if (!initialization.isEmpty())
+                if (initialization.Length > 0)
                 {
-                    sb.append("INITIALISATION ").append(initialization).append("\n");
+                    sb.Append("INITIALISATION ").Append(initialization).Append("\n");
                 }
 
-                if (!operations.isEmpty())
+                if (operations.Count > 0)
                 {
-                    sb.append("OPERATIONS\n");
-                    for (Iterator<string> op = operations.iterator(); op.hasNext();)
+                    sb.Append("OPERATIONS\n");
+                    foreach (string op in operations)
                     {
-                        string operation = op.next();
-                        sb.append("\t").append(operation).append(op.hasNext() ? ";\n" : "\n");
+                        //Phil Scrace 
+                        sb.Append("\t").Append(op).Append(op.hasNext() ? ";\n" : "\n");
                     }
                 }
-                sb.append("END");
-                return sb.tostring();
+                sb.Append("END");
+                return sb.ToString();
             }
 
             public MachineBuilder setSets(string sets)
@@ -183,59 +190,60 @@ public class TestParser
             }
         }
 
-        public class CycleComparator<E extends Object> {
-        private readonly Set<Set<string>> expected;
-        private readonly Set<Set<string>> actual;
-
-
-        public CycleComparator()
+        public class CycleComparator<T> where T : class
         {
-            expected = new HashSet<>();
-            actual = new HashSet<>();
-        }
+            private readonly HashSet<string> expected;
+            private readonly HashSet<string> actual;
 
-        public void addExpectedCycle(string...values)
-        {
-            expected.add(new HashSet<>(Arrays.asList(values)));
-        }
 
-        public void addActualCycle(Collection<? extends E> values)
-        {
-            actual.add(values.stream().map(E::tostring).collect(Collectors.toSet()));
-        }
-
-        public void compare()
-        {
-            Set<Set<string>> unvisitedExpexted = new HashSet<>(expected);
-
-            for (Set<string> currentActual : actual)
+            public CycleComparator()
             {
-                boolean found = false;
-                for (Set<string> currentExpected : expected)
-                {
-                    if (currentActual.size() == currentExpected.size())
-                    {
-                        if (currentActual.containsAll(currentExpected))
-                        {
-                            found = true;
-                            unvisitedExpexted.remove(currentExpected);
-                            break;
-                        }
-                    }
-                }
-                if (!found)
-                {
-                    fail("Didn't find: " + currentActual);
-                }
+                expected = new HashSet<string>();
+                actual = new HashSet<string>();
             }
 
-            if (!unvisitedExpexted.isEmpty())
+            public void addExpectedCycle(string values)
             {
-                fail("Didn't visit expected: " + unvisitedExpexted.tostring());
+                expected.Add(new HashSet<string>(values));
+            }
+
+            public void addActualCycle(Collection<? extends E> values)
+            {
+                actual.Add(values.stream().Map(E::tostring).collect(Collectors.toSet()));
+            }
+
+            public void compare()
+            {
+                Set<Set<string>> unvisitedExpexted = new HashSet<string>(expected);
+
+                for (Set<string> currentActual : actual)
+                {
+                    boolean found = false;
+                    for (Set<string> currentExpected : expected)
+                    {
+                        if (currentActual.size() == currentExpected.size())
+                        {
+                            if (currentActual.containsAll(currentExpected))
+                            {
+                                found = true;
+                                unvisitedExpexted.remove(currentExpected);
+                                break;
+                            }
+                        }
+                    }
+                    if (!found)
+                    {
+                        Assert.Fail("Didn't find: " + currentActual);
+                    }
+                }
+
+                if (!unvisitedExpexted.isEmpty())
+                {
+                    Assert.Fail("Didn't visit expected: " + unvisitedExpexted.tostring());
+                }
             }
         }
     }
 }
 
 
-}

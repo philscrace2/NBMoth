@@ -19,4 +19,8 @@
     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NBMoth.Antlr\NBMoth.Antlr.csproj" />
+  </ItemGroup>
+
 </Project>
